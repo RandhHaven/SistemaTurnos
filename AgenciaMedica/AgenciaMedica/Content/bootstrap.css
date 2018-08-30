@@ -10,7 +10,8 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+    margin: 0;
+    background-image: url("Imagenes/Oficina.jpg");
 }
 article,
 aside,
@@ -4956,11 +4957,12 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  color: inherit;
-  background-color: #eee;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #2EFEF7;
+    background-image: url("../Imagenes/Oficina.jpg");
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4984,10 +4986,11 @@ a.badge:focus {
   max-width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
+    .jumbotron {
+        padding-top: 48px;
+        padding-bottom: 48px;
+        
+    }
   .container .jumbotron,
   .container-fluid .jumbotron {
     padding-right: 60px;
