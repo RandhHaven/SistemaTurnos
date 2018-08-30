@@ -169,6 +169,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\imagen3.jpg" />
+    <Content Include="Imagenes\ImagenOfi.jpg" />
+    <Content Include="Imagenes\ImagenOfi1.jpg" />
+    <Content Include="Imagenes\images2.jpg" />
+    <Content Include="Imagenes\images3.jpg" />
     <Content Include="Imagenes\Oficina.jpg" />
     <Content Include="Imagenes\OficinaBBVA.jpg" />
     <Content Include="Imagenes\OficinaMas.jpg" />

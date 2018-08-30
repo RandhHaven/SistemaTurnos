@@ -11,7 +11,7 @@ namespace AgenciaMedica.Controllers
         // GET: Inicio
         public ActionResult Login()
         {
-            ViewBag.Tittle = "LOGIN";
+            ViewBag.Tittle = "Inicio de Sesion";
             return View();
         }
 

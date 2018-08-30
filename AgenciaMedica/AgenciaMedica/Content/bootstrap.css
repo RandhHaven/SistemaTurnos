@@ -4959,9 +4959,7 @@ a.badge:focus {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    color: inherit;
-    position: center;
-    background-image: url("../Imagenes/ImagenOfi.jpg");
+    background-image: url("../Imagenes/ImagenOfi1.jpg");
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4982,7 +4980,7 @@ a.badge:focus {
   border-radius: 6px;
 }
 .jumbotron .container {
-  max-width: 100%;
+  max-width: 70%;
 }
 @media screen and (min-width: 768px) {
     .jumbotron {
@@ -4992,7 +4990,7 @@ a.badge:focus {
     }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-right: 60px;
+    padding-right:60px;
     padding-left: 60px;
   }
   .jumbotron h1,
