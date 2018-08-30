@@ -11,7 +11,6 @@ html {
 }
 body {
     margin: 0;
-    background-image: url("Imagenes/Oficina.jpg");
 }
 article,
 aside,
@@ -4961,8 +4960,8 @@ a.badge:focus {
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: inherit;
-    background-color: #2EFEF7;
-    background-image: url("../Imagenes/Oficina.jpg");
+    position: center;
+    background-image: url("../Imagenes/ImagenOfi.jpg");
 }
 .jumbotron h1,
 .jumbotron .h1 {

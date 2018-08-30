@@ -7,7 +7,11 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    
+}
+
+.body-content-prim
+{
+    background: url("../Imagenes/Oficina.jpg");
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

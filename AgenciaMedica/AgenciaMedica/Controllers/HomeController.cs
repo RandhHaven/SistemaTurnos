@@ -10,19 +10,20 @@ namespace AgenciaMedica.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "";
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Informacion de la Empresa Medica.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contacto de la Pagina.";
 
             return View();
         }

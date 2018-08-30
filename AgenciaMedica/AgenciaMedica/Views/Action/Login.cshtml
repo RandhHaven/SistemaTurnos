@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Ingreso";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Ingrese su usuario y su contraseña para ingresar.</p>
+
+<div >
+    <label class="body-content"> Usuario o Mail: </label>
+    <br />
+    <input type="text" />
+    <br />
+    <label>Contraseña: </label>
+    <br />
+    <input type="password" />
+    <br />
+    <a> @Html.ActionLink("Olvidò su Contraseña.", "Registro", "Action") </a>
+    <br />
+
+    <br />
+    <button className="btn btn-success center-block" type="button" onClick={this.handleClick}> Ingresar </button>
+</div>
