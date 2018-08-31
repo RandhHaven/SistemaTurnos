@@ -2,16 +2,22 @@
     ViewBag.Title = "Home Page";
 }
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Styles.Render("~/Imagenes/jpg")
-    @Styles.Render("~/Scripts/js")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000);
+    }
+</script>
 
 <div class="jumbotron">
     <div class="mySlides fade">
@@ -36,7 +42,7 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
     <h1>Turnos Medicos</h1>
-    <p class="lead"> Con esta pagina se puede </p>
+    <p> Descargá la cartilla off line desde la app del seguro que tengas asociado y buscá especialistas e instituciones médicas sin conexión a internet. </p>
 </div>
 
 <div class="row">

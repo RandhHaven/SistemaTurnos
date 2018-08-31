@@ -4895,13 +4895,16 @@ a.label:focus {
 .label-info[href]:focus {
   background-color: #31b0d5;
 }
+
 .label-warning {
   background-color: #f0ad4e;
 }
+
 .label-warning[href]:hover,
 .label-warning[href]:focus {
   background-color: #ec971f;
 }
+
 .label-danger {
   background-color: #d9534f;
 }
@@ -4923,9 +4926,11 @@ a.label:focus {
   background-color: #777;
   border-radius: 10px;
 }
+
 .badge:empty {
   display: none;
 }
+
 .btn .badge {
   position: relative;
   top: -1px;
@@ -4935,23 +4940,28 @@ a.label:focus {
   top: 0;
   padding: 1px 5px;
 }
+
 a.badge:hover,
 a.badge:focus {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
+
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
   color: #337ab7;
   background-color: #fff;
 }
+
 .list-group-item > .badge {
   float: right;
 }
+
 .list-group-item > .badge + .badge {
   margin-right: 5px;
 }
+
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
@@ -4963,19 +4973,19 @@ a.badge:focus {
     max-width: 1000px;
     position: relative;
     margin: auto;
-    background: url("../Imagenes/sustentabilidad-2.jpg");
 }
 
 .jumbotron h1,
 .jumbotron .h1 {
   color: white;
   padding-left:10%;
+  font-size:20%;
 }
 
-.jumbotron p {
-  margin-bottom: 15px;
-  font-size: 21px;
+.jumbotron p {  
+  font-size: 20px;
   font-weight: 200;
+  color:white;
 }
 
 .jumbotron > hr {
