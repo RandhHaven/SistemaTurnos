@@ -170,6 +170,8 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Imagenes\imagen3.jpg" />
+    <Content Include="Imagenes\imagen5.jpg" />
+    <Content Include="Imagenes\Imagen7.jpg" />
     <Content Include="Imagenes\ImagenOfi.jpg" />
     <Content Include="Imagenes\ImagenOfi1.jpg" />
     <Content Include="Imagenes\images2.jpg" />
@@ -177,6 +179,7 @@
     <Content Include="Imagenes\Oficina.jpg" />
     <Content Include="Imagenes\OficinaBBVA.jpg" />
     <Content Include="Imagenes\OficinaMas.jpg" />
+    <Content Include="Imagenes\sustentabilidad-2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -194,6 +197,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Slides.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

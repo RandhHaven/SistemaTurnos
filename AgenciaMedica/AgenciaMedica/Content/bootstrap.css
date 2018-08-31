@@ -4165,7 +4165,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 75px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -4180,8 +4180,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-collapse {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
   overflow-x: visible;
   -webkit-overflow-scrolling: touch;
   border-top: 1px solid transparent;
@@ -4955,33 +4955,116 @@ a.badge:focus {
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
+
 .jumbotron {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    background-image: url("../Imagenes/ImagenOfi1.jpg");
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    background: url("../Imagenes/sustentabilidad-2.jpg");
 }
+
 .jumbotron h1,
 .jumbotron .h1 {
-  color: inherit;
+  color: white;
+  padding-left:10%;
 }
+
 .jumbotron p {
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
 }
+
 .jumbotron > hr {
   border-top-color: #d5d5d5;
 }
+
 .container .jumbotron,
 .container-fluid .jumbotron {
   padding-right: 15px;
   padding-left: 15px;
   border-radius: 6px;
 }
+
 .jumbotron .container {
-  max-width: 70%;
+  max-width: 100%;
 }
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -12px;
+    padding-right: 5%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 @media screen and (min-width: 768px) {
     .jumbotron {
         padding-top: 48px;
@@ -4998,6 +5081,7 @@ a.badge:focus {
     font-size: 63px;
   }
 }
+
 .thumbnail {
   display: block;
   padding: 4px;
