@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AgenciaMedica.Models.Usuario
+@{
     ViewBag.Title = "Ingreso";
 }
 <h2>@ViewBag.Title</h2>
@@ -6,18 +7,39 @@
 
 <p>Ingrese su usuario y su contraseña para ingresar.</p>
 
-<div>
-    <label> Usuario o Mail: </label>
+<div class="glyphicon-log-in">
     <br />
-    <input type="text" />
     <br />
-    <label>Contraseña: </label>
-    <br />
-    <input type="password" />
-    <br />
-    <a> @Html.ActionLink("Olvidò su Contraseña.", "Registro", "Action") </a>
-    <br />
-
-    <br />
-    <button className="btn btn-success center-block" type="button" onClick={this.handleClick}> Ingresar </button>
+    @using (Html.BeginForm("Ingresar", "Action", FormMethod.Post))
+    {
+    <table>
+        <tr>
+            <td>
+                @Html.Label("User Name", new { @class = "col-md-2 control-label" })
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.User, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.User, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Password")
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Password, new { @class = "form-control", Type = "password" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a> @Html.ActionLink("Olvidò su Contraseña.", "Registro", "Action") </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="btnSubmit" value="Ingresar" />
+            </td>
+        </tr>
+    </table>
+    }
 </div>

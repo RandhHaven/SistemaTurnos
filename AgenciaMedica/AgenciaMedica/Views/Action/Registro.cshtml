@@ -1,4 +1,4 @@
-﻿
+﻿@model AgenciaMedica.Models.Usuario
 @{
     ViewBag.Title = "Registro";
 }
@@ -6,3 +6,75 @@
 <h2>Registro</h2>
 
 
+<div class="glyphicon-log-in">
+    <br />
+
+
+    <br />
+    @using (Html.BeginForm("Ingresar", "Account", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>
+
+                    @Html.Label("User Name", new { @class = "col-md-2 control-label" })
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.User, new { @class = "form-control" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Email")
+                </td>
+                <td>
+                    @Html.TextBoxFor(account => account.Password)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Password")
+                </td>
+                <td>
+                    @Html.TextBoxFor(account => account.Password)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Confirm Password")
+                </td>
+                <td>
+                    @Html.Password("txtPassword")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="btnSubmit" value="Sign Up" />
+                </td>
+            </tr>
+        </table>
+
+        <!-- form goes here -->
+        <div>
+            @Html.LabelFor(m => m.User, new { @class = "col-md-2 control-label" })
+            <br />
+            <div class="col-md-2 control-label">
+                @Html.TextBoxFor(m => m.User, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.User, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+            <br />
+            <div class="col-md-2 control-label">
+                @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <a> @Html.ActionLink("Olvidò su Contraseña.", "Registro", "Action") </a>
+        <br />
+        <input type="submit" value="Sign Up" />
+    }
+</div>

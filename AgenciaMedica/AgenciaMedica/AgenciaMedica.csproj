@@ -158,6 +158,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Medico.cs" />
+    <Compile Include="Models\Paciente.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -169,9 +173,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\colores-claros.jpg" />
     <Content Include="Imagenes\imagen3.jpg" />
     <Content Include="Imagenes\imagen5.jpg" />
     <Content Include="Imagenes\Imagen7.jpg" />
+    <Content Include="Imagenes\Imagen8.jpg" />
     <Content Include="Imagenes\ImagenOfi.jpg" />
     <Content Include="Imagenes\ImagenOfi1.jpg" />
     <Content Include="Imagenes\images2.jpg" />
@@ -217,7 +223,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
