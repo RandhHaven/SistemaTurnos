@@ -1,6 +1,7 @@
 ﻿@model AgenciaMedica.Models.Usuario
 @{
     ViewBag.Title = "Ingreso";
+
 }
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
@@ -8,8 +9,7 @@
 <p>Ingrese su usuario y su contraseña para ingresar.</p>
 
 <div class="glyphicon-log-in">
-    <br />
-    <br />
+    
     @using (Html.BeginForm("Ingresar", "Action", FormMethod.Post))
     {
     <table>
@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td>
-                @Html.Label("Password")
+                @Html.Label("Password", new { @class = "col-md-2 control-label" })
             </td>
             <td>
                 @Html.TextBoxFor(m => m.Password, new { @class = "form-control", Type = "password" })

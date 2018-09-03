@@ -4977,7 +4977,6 @@ a.badge:focus {
 
 .jumbotron h1,
 .jumbotron .h1 {
-  color: white;
   padding-left:10%;
   font-size:20%;
 }
@@ -4985,7 +4984,6 @@ a.badge:focus {
 .jumbotron p {  
   font-size: 20px;
   font-weight: 200;
-  color:white;
 }
 
 .jumbotron > hr {
