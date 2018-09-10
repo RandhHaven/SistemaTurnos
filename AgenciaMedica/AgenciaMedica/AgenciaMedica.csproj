@@ -158,7 +158,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Medico.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -170,6 +169,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\page-login.css" />
+    <Content Include="Content\slides-styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -184,6 +184,9 @@
     <Content Include="Imagenes\ImagenOfi1.jpg" />
     <Content Include="Imagenes\images2.jpg" />
     <Content Include="Imagenes\images3.jpg" />
+    <Content Include="Imagenes\img_mountains_wide.jpg" />
+    <Content Include="Imagenes\img_nature_wide.jpg" />
+    <Content Include="Imagenes\img_snow_wide.jpg" />
     <Content Include="Imagenes\Oficina.jpg" />
     <Content Include="Imagenes\OficinaBBVA.jpg" />
     <Content Include="Imagenes\OficinaMas.jpg" />
@@ -218,14 +221,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Inicio\Inicio.cshtml" />
     <Content Include="Views\Action\Login.cshtml" />
     <Content Include="Views\Action\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

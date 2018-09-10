@@ -24,7 +24,12 @@ namespace AgenciaMedica
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                       "~/Content/slides-styles.css",
+                       "~/Content/page-login.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/Slides.js"));
         }
     }
 }

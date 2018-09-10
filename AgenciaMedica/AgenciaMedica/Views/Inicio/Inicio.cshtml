@@ -10,31 +10,50 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body class="body-content-prim">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                @Html.ActionLink("UVINET", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Ingresar a UVI", "Login", "Action")</li>
-                </ul>
-            </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <h1 class="text-h1">Turnos Medicos</h1>
+            <img src="~/Imagenes/sustentabilidad-2.jpg" style="width:70%">
+            <div class="text">Descargá la cartilla off line desde la app del seguro que tengas asociado y buscá especialistas e instituciones médicas sin conexión a internet.</div>
         </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <h1 class="text-h1">Turnos Medicos</h1>
+            <img src="~/Imagenes/foco1.jpg" style="width:70%">
+            <div class="text">Descargá la cartilla off line desde la app del seguro que tengas asociado y buscá especialistas e instituciones médicas sin conexión a internet.</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <h1 class="text-h1">Turnos Medicos</h1>
+            <img src="~/Imagenes/img_nature_wide.jpg" style="width:100%">
+            <div class="text">Descargá la cartilla off line desde la app del seguro que tengas asociado y buscá especialistas e instituciones médicas sin conexión a internet.</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <br>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year</p>
+            <p>&copy; Buenos Aires @DateTime.Now.Year</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
