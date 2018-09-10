@@ -3,41 +3,44 @@
     ViewBag.Title = "Ingreso";
 
 }
+
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
-
+@Styles.Render("~/Content/css")
 <p>Ingrese su usuario y su contraseña para ingresar.</p>
 
-<div>
-    @using (Html.BeginForm("Ingresar", "Action", FormMethod.Post))
-    {
-        <table>
-            <tr>
-                <td>
-                    @Html.Label("Usuario: ", new { @class = "col-md-2 control-label" })
-                </td>
-                <td>
-                    @Html.TextBoxFor(m => m.User, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.User, "", new { @class = "text-danger" })
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    @Html.Label("Password: ", new { @class = "col-md-2 control-label" })
-                </td>
-                <td>
-                    @Html.TextBoxFor(m => m.Password, new { @class = "form-control", Type = "password", })
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a> @Html.ActionLink("Olvidò su Contraseña.", "Registro", "Action") </a>
-                </td>
-            </tr>
+<body class="body-login">
+    <div>
+        @using (Html.BeginForm("Ingresar", "Action", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>
+                        @Html.Label("Usuario: ", new { @class = "col-md-2 control-label" })
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.User, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.User, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
 
-        </table>
-        <input class="btn-ingresar" ; type="submit" name="btnSubmit" value="Ingresar" />
-        
-    }
-</div>
+                <tr>
+                    <td>
+                        @Html.Label("Password: ", new { @class = "col-md-2 control-label" })
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", Type = "password", })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a> @Html.ActionLink("Olvidò su Contraseña.", "Registro", "Action") </a>
+                    </td>
+                </tr>
+
+            </table>
+            <input class="btn-ingresar" ; type="submit" name="btnSubmit" value="Ingresar" />
+
+        }
+    </div>
+</body>
