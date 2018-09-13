@@ -174,8 +174,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\Agenda.png" />
+    <Content Include="Imagenes\agua.jpeg" />
+    <Content Include="Imagenes\Boletin.jpg" />
     <Content Include="Imagenes\colores-claros.jpg" />
     <Content Include="Imagenes\foco1.jpg" />
+    <Content Include="Imagenes\Gris.jpg" />
+    <Content Include="Imagenes\header.jpg" />
     <Content Include="Imagenes\imagen3.jpg" />
     <Content Include="Imagenes\imagen5.jpg" />
     <Content Include="Imagenes\Imagen7.jpg" />
@@ -190,6 +195,8 @@
     <Content Include="Imagenes\Oficina.jpg" />
     <Content Include="Imagenes\OficinaBBVA.jpg" />
     <Content Include="Imagenes\OficinaMas.jpg" />
+    <Content Include="Imagenes\palmeras.jpg" />
+    <Content Include="Imagenes\playa.jpg" />
     <Content Include="Imagenes\sustentabilidad-2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

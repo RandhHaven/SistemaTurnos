@@ -11,6 +11,7 @@
 
 .body-content-prim {
     background: url("../Imagenes/Imagen8.jpg");
+    position:center;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
