@@ -51,10 +51,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -158,9 +166,33 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Paciente.cs" />
-    <Compile Include="Models\Persona.cs" />
-    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\estados.cs">
+      <DependentUpon>ModelAgendaMedica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAgendaMedica.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAgendaMedica.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAgendaMedica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAgendaMedica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAgendaMedica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAgendaMedica.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entidades\Paciente.cs" />
+    <Compile Include="Models\Entidades\Persona.cs" />
+    <Compile Include="Models\Entidades\Usuario.cs" />
+    <Compile Include="Models\tipos_usuarios.cs">
+      <DependentUpon>ModelAgendaMedica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usuarios.cs">
+      <DependentUpon>ModelAgendaMedica.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -198,11 +230,28 @@
     <Content Include="Imagenes\palmeras.jpg" />
     <Content Include="Imagenes\playa.jpg" />
     <Content Include="Imagenes\sustentabilidad-2.jpg" />
+    <Content Include="Models\ModelAgendaMedica.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelAgendaMedica.Context.cs</LastGenOutput>
+      <DependentUpon>ModelAgendaMedica.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ModelAgendaMedica.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAgendaMedica.edmx</DependentUpon>
+      <LastGenOutput>ModelAgendaMedica.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
+    </Content>
+    <EntityDeploy Include="Models\ModelAgendaMedica.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelAgendaMedica.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelAgendaMedica.edmx.diagram">
+      <DependentUpon>ModelAgendaMedica.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -248,7 +297,9 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup Condition="$(VisualStudioVersion) == '15.0'">
     <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=13.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
