@@ -11,7 +11,7 @@ CREATE TABLE tipos_usuarios (
 );
 
 CREATE TABLE usuarios (
-    id int not null,
+    id int IDENTITY(1000,1) not null,
     usuario varchar(20) not null,
     nombre varchar(100) not null,
     password varchar(20) not null,
