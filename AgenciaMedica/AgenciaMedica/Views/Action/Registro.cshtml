@@ -19,7 +19,7 @@
                             @Html.Label("Nombre: ", new { @class = "col-lg-3 control-label" })
                             <div class="col-lg-9">
                                 @Html.TextBoxFor(m => m.User, new { @class = "col-lg-9 form-control" })
-                                @Html.ValidationMessageFor(m => m.User, "Por favor ingrese el usuario", new { @class = "text-danger" })
+                                @Html.ValidationMessageFor(m => m.User, "Por favor ingrese el Nombre", new { @class = "text-danger" })
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
                             @Html.Label("Apellido: ", new { @class = "col-lg-3 control-label" })
                             <div class="col-lg-9">
                                 @Html.TextBoxFor(m => m.Password, new { @class = "col-lg-9 form-control", Type = "password" })
-                                @Html.ValidationMessageFor(m => m.Password, "Por favor ingrese la passsword", new { @class = "text-danger" })
+                                @Html.ValidationMessageFor(m => m.Password, "Por favor ingrese el apellido", new { @class = "text-danger" })
                             </div>
                         </div>
 
