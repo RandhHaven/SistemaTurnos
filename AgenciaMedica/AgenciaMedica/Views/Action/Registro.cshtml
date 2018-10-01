@@ -5,49 +5,79 @@
 
 <h2>Registro</h2>
 
-<div class="log-in">
-    <br />
-    <br />
-    @using (Html.BeginForm("Registrar", "Account", FormMethod.Post))
+
+<div>
+    @using (Html.BeginForm("Ingresar", "Action", FormMethod.Post))
     {
-        <table>
-            <tr>
-                <td>
-                    @Html.Label("Usuario: ", new { @class = "col-md-2 control-label" })
-                </td>
-                <td>
-                    @Html.TextBoxFor(usu => usu.User, new { @class = "form-control" })
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.Label("Email: ", new { @class = "col-md-2 control-label" })
-                </td>
-                <td>
-                    @Html.TextBoxFor(usu => usu.Email, new { @class = "form-control" })
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.Label("Password: ", new { @class = "col-md-2 control-label" })
-                </td>
-                <td>
-                    @Html.TextBoxFor(usu => usu.Password, new { @class = "form-control" })
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.Label("Confirm Password: ", new { @class = "col-md-1 control-label" })
-                </td>
-                <td>
-                    @Html.TextBoxFor(usu => usu.Password, new { @class = "form-control", type="password" })
-                </td>
-            </tr>
-            <tr class="btn-lg btn-success">
-                <td>
-                    <input type="submit" name="btnSubmit" value="Registrar" />
-                </td>
-            </tr>
-        </table>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <h1> Registro del Sistema </h1>
+                <form class="form-horizontal col-lg-12">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            @Html.Label("Nombre: ", new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(m => m.User, new { @class = "col-lg-9 form-control" })
+                                @Html.ValidationMessageFor(m => m.User, "Por favor ingrese el usuario", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Usuario: ", new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(m => m.Password, new { @class = "col-lg-9 form-control", Type = "password" })
+                                @Html.ValidationMessageFor(m => m.Password, "Por favor ingrese el Usuario", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Password: ", new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(m => m.Password, new { @class = "col-lg-9 form-control", Type = "password" })
+                                @Html.ValidationMessageFor(m => m.Password, "Por favor ingrese la passsword", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+
+
+                        <div class="form-group">
+                            @Html.Label("Apellido: ", new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(m => m.Password, new { @class = "col-lg-9 form-control", Type = "password" })
+                                @Html.ValidationMessageFor(m => m.Password, "Por favor ingrese la passsword", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Email: ", new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(m => m.Password, new { @class = "col-lg-9 form-control", Type = "password" })
+                                @Html.ValidationMessageFor(m => m.Password, "Por favor ingrese el Email", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Confirme su Password: ", new { @class = "col-lg-3 control-label" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(m => m.Password, new { @class = "col-lg-9 form-control", Type = "password" })
+                                @Html.ValidationMessageFor(m => m.Password, "Por favor ingrese la passsword", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div>
+                        <input class="btn-ingresar col-lg-3" ; type="submit" name="btnRegister" value="Registrar" />
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
     }
 </div>

@@ -22,16 +22,17 @@ namespace AgenciaMedica.Controllers
         }
 
         [HttpPost]
-        public ActionResult Ingresar(string userName, string email, string password)
+        public ActionResult Ingresar(string user, string password)
         {
             Usuario unUsuario = new Usuario
             {
-                User = userName,
+                User = user,
                 Password = password
             };
             //Crear todo el esquema de ingreso.
-
-            return View("Registro");
+            user = null;
+            password = null;
+            return View("Login");
         }
 
         [HttpPost]
