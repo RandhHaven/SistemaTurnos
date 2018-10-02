@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AgenciaMedica.Models
+namespace EFAgendaMedica
 {
     using System;
     using System.Collections.Generic;

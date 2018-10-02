@@ -7,15 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AgenciaMedica.Models
+namespace EFAgendaMedica
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tipos_usuarios
+    public partial class estados
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tipos_usuarios()
+        public estados()
         {
             this.usuarios = new HashSet<usuarios>();
         }

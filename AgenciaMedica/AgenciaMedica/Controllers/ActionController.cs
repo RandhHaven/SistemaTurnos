@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace AgenciaMedica.Controllers
 {
-    public class ActionController : Controller
+    public class ActionController :  Controller
     {
         // GET: Inicio
         public ActionResult Login()
@@ -23,16 +23,9 @@ namespace AgenciaMedica.Controllers
 
         [HttpPost]
         public ActionResult Ingresar(string user, string password)
-        {
-            Usuario unUsuario = new Usuario
-            {
-                User = user,
-                Password = password
-            };
+        {            
             //Crear todo el esquema de ingreso.
             
-            user = null;
-            password = null;
             return View("Login");
         }
 

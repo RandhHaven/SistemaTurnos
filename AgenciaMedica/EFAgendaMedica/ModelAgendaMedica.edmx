@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="dbo.AgendaMedicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="dbo.AgendaMedicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="estados">
           <Key>
             <PropertyRef Name="id" />
@@ -23,7 +23,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="usuario" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
@@ -35,7 +35,7 @@
           <Property Name="estado" Type="int" Nullable="false" />
           <Property Name="tipo_usuario" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__usuarios__estado__6477ECF3">
+        <Association Name="FK__usuarios__estado__68487DD7">
           <End Role="estados" Type="Self.estados" Multiplicity="1" />
           <End Role="usuarios" Type="Self.usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -47,7 +47,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__usuarios__tipo_u__656C112C">
+        <Association Name="FK__usuarios__tipo_u__693CA210">
           <End Role="tipos_usuarios" Type="Self.tipos_usuarios" Multiplicity="1" />
           <End Role="usuarios" Type="Self.usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -63,39 +63,27 @@
           <EntitySet Name="estados" EntityType="Self.estados" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tipos_usuarios" EntityType="Self.tipos_usuarios" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__usuarios__estado__6477ECF3" Association="Self.FK__usuarios__estado__6477ECF3">
+          <AssociationSet Name="FK__usuarios__estado__68487DD7" Association="Self.FK__usuarios__estado__68487DD7">
             <End Role="estados" EntitySet="estados" />
             <End Role="usuarios" EntitySet="usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__usuarios__tipo_u__656C112C" Association="Self.FK__usuarios__tipo_u__656C112C">
+          <AssociationSet Name="FK__usuarios__tipo_u__693CA210" Association="Self.FK__usuarios__tipo_u__693CA210">
             <End Role="tipos_usuarios" EntitySet="tipos_usuarios" />
             <End Role="usuarios" EntitySet="usuarios" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbo.AgendaMedicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="estados" EntityType="dbo.AgendaMedicaModel.estados" />
-          <EntitySet Name="tipos_usuarios" EntityType="dbo.AgendaMedicaModel.tipos_usuarios" />
-          <EntitySet Name="usuariosSet" EntityType="dbo.AgendaMedicaModel.usuarios" />
-          <AssociationSet Name="FK__usuarios__estado__6477ECF3" Association="dbo.AgendaMedicaModel.FK__usuarios__estado__6477ECF3">
-            <End Role="estados" EntitySet="estados" />
-            <End Role="usuarios1" EntitySet="usuariosSet" />
-          </AssociationSet>
-          <AssociationSet Name="FK__usuarios__tipo_u__656C112C" Association="dbo.AgendaMedicaModel.FK__usuarios__tipo_u__656C112C">
-            <End Role="tipos_usuarios" EntitySet="tipos_usuarios" />
-            <End Role="usuarios1" EntitySet="usuariosSet" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="estados">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="usuarios" Relationship="dbo.AgendaMedicaModel.FK__usuarios__estado__6477ECF3" FromRole="estados" ToRole="usuarios1" />
+          <NavigationProperty Name="usuarios" Relationship="Self.FK__usuarios__estado__68487DD7" FromRole="estados" ToRole="usuarios" />
         </EntityType>
         <EntityType Name="tipos_usuarios">
           <Key>
@@ -103,50 +91,63 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="usuarios" Relationship="dbo.AgendaMedicaModel.FK__usuarios__tipo_u__656C112C" FromRole="tipos_usuarios" ToRole="usuarios1" />
+          <NavigationProperty Name="usuarios" Relationship="Self.FK__usuarios__tipo_u__693CA210" FromRole="tipos_usuarios" ToRole="usuarios" />
         </EntityType>
         <EntityType Name="usuarios">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="usuario" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="fecha_alta" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="usuario_alta" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="usuario_alta" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fecha_modificacion" Type="DateTime" Precision="0" />
           <Property Name="usuario_modificacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="estado" Type="Int32" Nullable="false" />
           <Property Name="tipo_usuario" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="estados" Relationship="dbo.AgendaMedicaModel.FK__usuarios__estado__6477ECF3" FromRole="usuarios1" ToRole="estados" />
-          <NavigationProperty Name="tipos_usuarios" Relationship="dbo.AgendaMedicaModel.FK__usuarios__tipo_u__656C112C" FromRole="usuarios1" ToRole="tipos_usuarios" />
+          <NavigationProperty Name="estados" Relationship="Self.FK__usuarios__estado__68487DD7" FromRole="usuarios" ToRole="estados" />
+          <NavigationProperty Name="tipos_usuarios" Relationship="Self.FK__usuarios__tipo_u__693CA210" FromRole="usuarios" ToRole="tipos_usuarios" />
         </EntityType>
-        <Association Name="FK__usuarios__estado__6477ECF3">
-          <End Type="dbo.AgendaMedicaModel.estados" Role="estados" Multiplicity="1" />
-          <End Type="dbo.AgendaMedicaModel.usuarios" Role="usuarios1" Multiplicity="*" />
+        <Association Name="FK__usuarios__estado__68487DD7">
+          <End Role="estados" Type="Self.estados" Multiplicity="1" />
+          <End Role="usuarios" Type="Self.usuarios" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="estados">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="usuarios1">
+            <Dependent Role="usuarios">
               <PropertyRef Name="estado" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__usuarios__tipo_u__656C112C">
-          <End Type="dbo.AgendaMedicaModel.tipos_usuarios" Role="tipos_usuarios" Multiplicity="1" />
-          <End Type="dbo.AgendaMedicaModel.usuarios" Role="usuarios1" Multiplicity="*" />
+        <Association Name="FK__usuarios__tipo_u__693CA210">
+          <End Role="tipos_usuarios" Type="Self.tipos_usuarios" Multiplicity="1" />
+          <End Role="usuarios" Type="Self.usuarios" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tipos_usuarios">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="usuarios1">
+            <Dependent Role="usuarios">
               <PropertyRef Name="tipo_usuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="estados" EntityType="Self.estados" />
+          <EntitySet Name="tipos_usuarios" EntityType="Self.tipos_usuarios" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+          <AssociationSet Name="FK__usuarios__estado__68487DD7" Association="Self.FK__usuarios__estado__68487DD7">
+            <End Role="estados" EntitySet="estados" />
+            <End Role="usuarios" EntitySet="usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usuarios__tipo_u__693CA210" Association="Self.FK__usuarios__tipo_u__693CA210">
+            <End Role="tipos_usuarios" EntitySet="tipos_usuarios" />
+            <End Role="usuarios" EntitySet="usuarios" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -156,33 +157,33 @@
           <EntitySetMapping Name="estados">
             <EntityTypeMapping TypeName="dbo.AgendaMedicaModel.estados">
               <MappingFragment StoreEntitySet="estados">
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tipos_usuarios">
             <EntityTypeMapping TypeName="dbo.AgendaMedicaModel.tipos_usuarios">
               <MappingFragment StoreEntitySet="tipos_usuarios">
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="usuariosSet">
+          <EntitySetMapping Name="usuarios">
             <EntityTypeMapping TypeName="dbo.AgendaMedicaModel.usuarios">
               <MappingFragment StoreEntitySet="usuarios">
-                <ScalarProperty Name="tipo_usuario" ColumnName="tipo_usuario" />
-                <ScalarProperty Name="estado" ColumnName="estado" />
-                <ScalarProperty Name="usuario_modificacion" ColumnName="usuario_modificacion" />
-                <ScalarProperty Name="fecha_modificacion" ColumnName="fecha_modificacion" />
-                <ScalarProperty Name="usuario_alta" ColumnName="usuario_alta" />
-                <ScalarProperty Name="fecha_alta" ColumnName="fecha_alta" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="usuario" ColumnName="usuario" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="fecha_alta" ColumnName="fecha_alta" />
+                <ScalarProperty Name="usuario_alta" ColumnName="usuario_alta" />
+                <ScalarProperty Name="fecha_modificacion" ColumnName="fecha_modificacion" />
+                <ScalarProperty Name="usuario_modificacion" ColumnName="usuario_modificacion" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="tipo_usuario" ColumnName="tipo_usuario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

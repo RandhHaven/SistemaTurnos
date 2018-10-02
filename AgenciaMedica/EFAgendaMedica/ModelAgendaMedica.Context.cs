@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AgenciaMedica.Models
+namespace EFAgendaMedica
 {
     using System;
     using System.Data.Entity;
@@ -27,6 +27,6 @@ namespace AgenciaMedica.Models
     
         public virtual DbSet<estados> estados { get; set; }
         public virtual DbSet<tipos_usuarios> tipos_usuarios { get; set; }
-        public virtual DbSet<usuarios> usuariosSet { get; set; }
+        public virtual DbSet<usuarios> usuarios { get; set; }
     }
 }
