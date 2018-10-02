@@ -7,7 +7,7 @@ using System.Web;
 
 namespace AgenciaMedica.Models
 {
-    public class Usuario : Entities
+    internal class Usuario : Entities
     {
         int idUsuario;
         string user;
@@ -21,7 +21,7 @@ namespace AgenciaMedica.Models
         public string Password { get => password; set => password = value; }
         public string Email { get => email; set => email = value; }
 
-        private List<Usuario> getUsuarios()
+        internal List<Usuario> GetUsuarios()
         {            
             var usuariosListado = from user in usuariosSet.AsEnumerable()
                                   select user;
@@ -32,6 +32,20 @@ namespace AgenciaMedica.Models
                 Password = usu.password,
                 Email = usu.email                
             });
+        }
+
+        internal bool GuardarUsuario(Usuario unUsuario)
+        {
+            bool correctInsert = false;
+            try
+            {
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return correctInsert;
         }
     }
 }

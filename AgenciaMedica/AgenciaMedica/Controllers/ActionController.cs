@@ -30,6 +30,7 @@ namespace AgenciaMedica.Controllers
                 Password = password
             };
             //Crear todo el esquema de ingreso.
+            
             user = null;
             password = null;
             return View("Login");
