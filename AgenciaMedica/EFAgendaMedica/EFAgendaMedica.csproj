@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\EAPaciente.cs" />
+    <Compile Include="Entidades\EAPersona.cs" />
+    <Compile Include="Entidades\EAUsuario.cs" />
     <Compile Include="estados.cs">
       <DependentUpon>ModelAgendaMedica.tt</DependentUpon>
     </Compile>
@@ -103,8 +106,6 @@
       <LastGenOutput>ModelAgendaMedica1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entidades\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

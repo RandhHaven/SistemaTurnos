@@ -1,9 +1,7 @@
 ﻿using AgenciaMedica.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using AgenciaMedica.Models.Core;
 using System.Web.Mvc;
+
 
 namespace AgenciaMedica.Controllers
 {
@@ -12,7 +10,7 @@ namespace AgenciaMedica.Controllers
         // GET: Inicio
         public ActionResult Login()
         {
-            ViewBag.Tittle = "Inicio de Sesion";
+            ViewBag.Tittle = "Inicio de Sesión";
             return View();
         }
 
@@ -23,15 +21,22 @@ namespace AgenciaMedica.Controllers
 
         [HttpPost]
         public ActionResult Ingresar(string user, string password)
-        {            
+        {
             //Crear todo el esquema de ingreso.
-            
-            return View("Login");
+            Usuario usuario = CoreUsuario.ValidarYObtenerUsuario(user, password);
+            if (object.Equals(usuario, null))
+            {
+            }
+            else
+            {
+            }
+            return View("Error");
         }
 
         [HttpPost]
         public ActionResult Registrar(string userName, string email, string password)
         {
+            Usuario usuario = CoreUsuario.RegistrarNuevoUsuario(userName, email, password);
             return View("Registro");
         }
     }

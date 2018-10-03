@@ -170,9 +170,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entidades\Paciente.cs" />
-    <Compile Include="Models\Entidades\Persona.cs" />
+    <Compile Include="Models\Core\CoreUsuario.cs" />
     <Compile Include="Models\Entidades\Usuario.cs" />
+    <Compile Include="Models\BaseFactory\BaseUsuario.cs" />
+    <Compile Include="Models\Factory\FactoryUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -245,7 +246,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Core\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
